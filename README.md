@@ -1,10 +1,10 @@
-# Zero Salary AI — V4 Final Fixed
+# Zero Salary AI — V4 Clean Fix
 
-This package is made for the easiest GitHub mobile upload.
-
-Important:
-- founders-v3.png is at the ROOT level.
-- what-is-whatsapp-voice-ai-agent.html is at the ROOT level.
-- No manual path editing is needed after upload.
-- Remove/replace old files with these files.
-- Keep index.html, styles.css, script.js, founders-v3.png, blog.html and article file in the same repository root.
+Fixed:
+- Founder fade reduced to the lower edge only.
+- Founder names now sit directly below the image with no large gap.
+- No stray duplicate Shyla Qudraan text.
+- Root founder image remains founders-v3.png.
+- Article page has full site styling embedded as a fallback.
+- Both root and /blog article copies are styled.
+- Homepage and blog point to the root article.

@@ -195,3 +195,154 @@
   .founder-photo-wrap{padding-bottom:48px}
   .founder-photo-wrap .founder-fade{bottom:44px}
 }
+
+
+/* =====================================================
+   V4 CLEAN — founder fade refinement + zero name gap
+   ===================================================== */
+.founder-image-stage{
+  position:relative;
+  width:100%;
+  line-height:0;
+  isolation:isolate;
+}
+.founder-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  min-height:535px;
+}
+.founder-visual .founder-image-stage{
+  max-width:570px;
+}
+.founder-img{
+  width:100%;
+  height:500px;
+  object-fit:contain;
+  object-position:center bottom;
+}
+.founder-small{
+  width:100%;
+  max-height:500px;
+  object-fit:contain;
+}
+
+/* Fade only the very bottom of the jackets — not half the outfit */
+.founder-fade{
+  position:absolute;
+  z-index:4;
+  left:0;
+  right:0;
+  bottom:0;
+  height:72px;
+  pointer-events:none;
+  background:linear-gradient(
+    to bottom,
+    rgba(244,248,255,0) 0%,
+    rgba(244,248,255,.08) 18%,
+    rgba(244,248,255,.30) 42%,
+    rgba(244,248,255,.68) 70%,
+    rgba(244,248,255,1) 100%
+  );
+}
+
+/* A soft blue glow behind, kept subtle */
+.founder-visual::after{
+  bottom:34px !important;
+  height:30% !important;
+  opacity:.68;
+}
+.founder-photo-wrap::after{
+  bottom:18px !important;
+  height:34% !important;
+  opacity:.62;
+}
+
+/* Names begin immediately after the image fade */
+.names{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  width:84%;
+  display:grid !important;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  text-align:center;
+  margin-top:-2px;
+  padding-top:0;
+  z-index:7;
+  line-height:1.35;
+}
+.names strong,.founder-name-row strong{
+  display:block;
+  font-size:14px;
+  color:var(--ink);
+}
+.names span,.founder-name-row span{
+  display:block;
+  margin-top:4px;
+  font-size:11px;
+  color:var(--muted);
+}
+
+.founder-photo-wrap{
+  position:relative;
+  padding-bottom:0 !important;
+}
+.founder-photo-wrap .founder-image-stage{
+  position:relative;
+  z-index:2;
+}
+.founder-name-row{
+  position:relative;
+  z-index:7;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  text-align:center;
+  margin-top:-2px !important;
+  padding-top:0;
+}
+.founder-photo-wrap .founder-fade{
+  height:68px;
+}
+
+/* Ensure article content is always visible */
+.article.reveal,.page-hero .article.reveal{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+@media(max-width:640px){
+  .founder-visual{
+    min-height:0 !important;
+    padding-bottom:0 !important;
+  }
+  .founder-img{
+    height:auto !important;
+    max-height:none;
+  }
+  .founder-fade{
+    height:58px;
+  }
+  .founder-photo-wrap .founder-fade{
+    height:56px;
+  }
+  .names{
+    width:92%;
+    margin-top:-1px;
+  }
+  .founder-name-row{
+    margin-top:-1px !important;
+  }
+  .founder-visual::after{
+    bottom:28px !important;
+    height:25% !important;
+  }
+  .founder-photo-wrap::after{
+    bottom:12px !important;
+    height:28% !important;
+  }
+}
