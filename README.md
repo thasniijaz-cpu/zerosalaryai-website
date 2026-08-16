@@ -1,8 +1,11 @@
-# Zero Salary AI — Final Name Fix
+# Zero Salary AI — V4 Mobile Spacing Polish
 
-Only these changes:
-- Removed circular animation from the first founder image section.
-- Ijaz Qudraan / Co-Founder stays under Ijaz.
-- Shyla Qudraan / Founder stays under Shyla.
-- Forced two-column founder names on both desktop and mobile.
-- No other design/content changes.
+Only mobile spacing changes:
+- 24px left/right padding for founder content
+- 30px gap below founder names
+- 20px gap below "Meet The Qudraans"
+- 24px gap below headline
+- More paragraph line-height and spacing
+- More space before trust cards and CTA
+- More space before next section
+- No desktop layout changes

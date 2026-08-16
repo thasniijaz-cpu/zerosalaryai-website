@@ -676,3 +676,70 @@
     font-size:11px !important;
   }
 }
+
+
+/* ======================================================
+   MOBILE BREATHING SPACE POLISH — approved spacing mockup
+   ====================================================== */
+@media(max-width:640px){
+
+  /* Give the founder content real side breathing room */
+  .founder-section .container,
+  .founder-section .founder-grid{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  .founder-section .founder-copy{
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+
+  /* Space between names and section label */
+  .founder-name-row{
+    margin-bottom:30px !important;
+  }
+
+  /* Space from eyebrow to title */
+  .founder-copy .eyebrow{
+    margin-bottom:20px !important;
+  }
+
+  /* Title gets more breathing room */
+  .founder-copy h2{
+    margin-bottom:24px !important;
+    line-height:1.08 !important;
+    font-size:clamp(36px,10vw,46px) !important;
+  }
+
+  /* Paragraph spacing and easier reading */
+  .founder-copy .lead{
+    margin-bottom:24px !important;
+    line-height:1.7 !important;
+  }
+
+  .founder-copy > p:not(.lead){
+    margin-bottom:26px !important;
+    line-height:1.65 !important;
+  }
+
+  /* Trust cards should not feel glued to the copy */
+  .founder-copy .values{
+    margin-top:0 !important;
+    gap:14px !important;
+  }
+
+  .founder-copy .value{
+    padding:18px 16px !important;
+  }
+
+  /* CTA breathing room */
+  .founder-copy .founder-cta{
+    margin-top:28px !important;
+  }
+
+  /* More space before next section */
+  .founder-section{
+    padding-bottom:92px !important;
+  }
+}
