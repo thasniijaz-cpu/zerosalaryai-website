@@ -346,3 +346,275 @@
     height:28% !important;
   }
 }
+
+
+/* ==========================================================
+   MOCKUP MATCH — Founder portrait + subtle lower fade only
+   ========================================================== */
+
+.founder-image-stage{
+  position:relative;
+  width:100%;
+  line-height:0;
+  isolation:isolate;
+}
+
+.founder-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  min-height:535px;
+  padding-bottom:0 !important;
+}
+
+.founder-visual .founder-image-stage{
+  width:100%;
+  max-width:570px;
+}
+
+.founder-img{
+  width:100%;
+  height:500px;
+  object-fit:contain;
+  object-position:center bottom;
+  position:relative;
+  z-index:2;
+}
+
+.founder-photo-wrap{
+  position:relative;
+  padding-bottom:0 !important;
+}
+
+.founder-small{
+  width:100%;
+  max-height:500px;
+  object-fit:contain;
+  object-position:center bottom;
+  position:relative;
+  z-index:2;
+}
+
+/* Fade starts only at the very bottom edge of the jackets */
+.founder-bottom-fade{
+  position:absolute;
+  z-index:4;
+  left:0;
+  right:0;
+  bottom:0;
+  height:18%;
+  max-height:86px;
+  pointer-events:none;
+  background:linear-gradient(
+    to bottom,
+    rgba(246,250,255,0) 0%,
+    rgba(246,250,255,.05) 18%,
+    rgba(246,250,255,.16) 38%,
+    rgba(246,250,255,.42) 62%,
+    rgba(246,250,255,.76) 82%,
+    rgba(246,250,255,1) 100%
+  );
+}
+
+/* Subtle blue glow behind founders, not over the faces/clothes */
+.founder-visual::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:8%;
+  right:8%;
+  bottom:54px;
+  height:28%;
+  border-radius:50%;
+  background:radial-gradient(
+    ellipse at center,
+    rgba(11,103,245,.14) 0%,
+    rgba(96,165,250,.08) 38%,
+    transparent 74%
+  );
+  filter:blur(24px);
+  pointer-events:none;
+}
+
+.founder-photo-wrap::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:7%;
+  right:7%;
+  bottom:54px;
+  height:30%;
+  border-radius:50%;
+  background:radial-gradient(
+    ellipse at center,
+    rgba(11,103,245,.13) 0%,
+    rgba(96,165,250,.07) 38%,
+    transparent 74%
+  );
+  filter:blur(24px);
+  pointer-events:none;
+}
+
+/* Names immediately below image, both always visible */
+.names,
+.founder-name-row{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  width:88%;
+  margin:0 auto;
+  padding:10px 0 0;
+  display:grid !important;
+  grid-template-columns:1fr auto 1fr;
+  gap:16px;
+  align-items:center;
+  text-align:center;
+  z-index:7;
+  line-height:1.35;
+}
+
+.person-name strong{
+  display:block;
+  font-size:15px;
+  color:var(--ink);
+}
+
+.person-name span{
+  display:block;
+  margin-top:4px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.name-divider{
+  width:1px;
+  height:42px;
+  background:linear-gradient(180deg,transparent,#CBD5E1,transparent);
+}
+
+/* Founder section spacing close to mockup */
+.founder-grid{
+  align-items:center;
+}
+
+.founder-copy{
+  position:relative;
+  z-index:2;
+}
+
+.founder-cta{
+  margin-top:24px;
+}
+
+.founder-cta .btn{
+  min-width:220px;
+}
+
+/* Article fallback: never show as unstyled plain page */
+.article{
+  max-width:860px;
+  margin:auto;
+}
+.article h1{
+  font-size:clamp(42px,5vw,66px);
+  line-height:1.05;
+}
+.article h2{
+  font-size:34px;
+  margin-top:55px;
+}
+.article h3{
+  font-size:22px;
+  margin-top:34px;
+}
+.article p,.article li{
+  font-size:17px;
+  color:#334155;
+}
+.article .intro{
+  font-size:21px;
+  color:#475569;
+}
+.article .callout{
+  padding:24px;
+  border-radius:18px;
+  background:#F3F8FF;
+  border:1px solid #DDEBFF;
+}
+.article-meta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:13px;
+  margin:18px 0 34px;
+}
+.article.reveal{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+@media(max-width:640px){
+  .founder-visual{
+    min-height:0 !important;
+  }
+
+  .founder-img{
+    height:auto !important;
+    max-height:none;
+  }
+
+  .founder-bottom-fade{
+    height:15%;
+    max-height:64px;
+  }
+
+  .founder-visual::after{
+    left:3%;
+    right:3%;
+    bottom:44px;
+    height:22%;
+    filter:blur(18px);
+  }
+
+  .founder-photo-wrap::after{
+    left:3%;
+    right:3%;
+    bottom:44px;
+    height:24%;
+    filter:blur(18px);
+  }
+
+  .names,
+  .founder-name-row{
+    width:92%;
+    gap:12px;
+    padding-top:8px;
+  }
+
+  .person-name strong{
+    font-size:14px;
+  }
+
+  .person-name span{
+    font-size:11px;
+  }
+
+  .name-divider{
+    height:36px;
+  }
+
+  .founder-grid{
+    gap:28px !important;
+  }
+
+  .founder-copy{
+    text-align:left;
+  }
+
+  .founder-cta .btn{
+    width:100%;
+  }
+}

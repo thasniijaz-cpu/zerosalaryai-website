@@ -1,10 +1,11 @@
-# Zero Salary AI — V4 Clean Fix
+# Zero Salary AI — V4 Mockup Matched
 
-Fixed:
-- Founder fade reduced to the lower edge only.
-- Founder names now sit directly below the image with no large gap.
-- No stray duplicate Shyla Qudraan text.
-- Root founder image remains founders-v3.png.
-- Article page has full site styling embedded as a fallback.
-- Both root and /blog article copies are styled.
-- Homepage and blog point to the root article.
+Final changes:
+- Founder fade starts only at the lower edge of jackets.
+- Both Ijaz and Shyla names are always visible.
+- Small divider between founder names.
+- No large gap between image and names.
+- Subtle blue glow behind founders.
+- Founder section CTA retained.
+- Article page styled with full embedded fallback CSS.
+- Root article link used for easiest GitHub Pages setup.
