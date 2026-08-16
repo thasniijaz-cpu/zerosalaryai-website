@@ -1,11 +1,8 @@
-# Zero Salary AI — V4 Mockup Matched
+# Zero Salary AI — Final Name Fix
 
-Final changes:
-- Founder fade starts only at the lower edge of jackets.
-- Both Ijaz and Shyla names are always visible.
-- Small divider between founder names.
-- No large gap between image and names.
-- Subtle blue glow behind founders.
-- Founder section CTA retained.
-- Article page styled with full embedded fallback CSS.
-- Root article link used for easiest GitHub Pages setup.
+Only these changes:
+- Removed circular animation from the first founder image section.
+- Ijaz Qudraan / Co-Founder stays under Ijaz.
+- Shyla Qudraan / Founder stays under Shyla.
+- Forced two-column founder names on both desktop and mobile.
+- No other design/content changes.

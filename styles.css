@@ -618,3 +618,61 @@
     width:100%;
   }
 }
+
+
+/* FINAL MICRO FIX — founder names side by side, circle animation removed */
+.voice-orbit{
+  display:none !important;
+}
+
+.names,
+.founder-name-row{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  width:92% !important;
+  gap:18px !important;
+  align-items:start !important;
+  text-align:center !important;
+}
+
+.names .person-name,
+.founder-name-row .person-name{
+  min-width:0;
+  width:100%;
+  text-align:center;
+}
+
+.names .person-name strong,
+.founder-name-row .person-name strong{
+  display:block;
+  white-space:nowrap;
+}
+
+.names .person-name span,
+.founder-name-row .person-name span{
+  display:block;
+}
+
+.name-divider{
+  display:none !important;
+}
+
+@media(max-width:640px){
+  .names,
+  .founder-name-row{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    width:96% !important;
+    gap:10px !important;
+  }
+
+  .names .person-name strong,
+  .founder-name-row .person-name strong{
+    font-size:13px !important;
+  }
+
+  .names .person-name span,
+  .founder-name-row .person-name span{
+    font-size:11px !important;
+  }
+}
